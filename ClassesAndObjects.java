@@ -24,7 +24,15 @@ class Student{
         this.name = name;
         this.age = age;
     }
+    Student(Student s3){
+        this.name = s3.name;
+        this.age = s3.age;
+    }
+    Student(){
+        
+    }
 }
+
 
 
 public class ClassesAndObjects {
@@ -44,5 +52,11 @@ public class ClassesAndObjects {
 
         Student s1 = new Student("Rishika", 22);
         s1.printInfo();
+        Student s2 = new Student();
+        s2.name = "Rishika";
+        s2.age = 24;
+
+        Student s3 = new Student(s2);
+        s2.printInfo();
     }
 }
