@@ -24,7 +24,7 @@ class Student{
         this.name = name;
         this.age = age;
     }
-    Student(Student s3){
+    Student(Student s3){                                    //called as copy constructor because it copies values of another object into it's own
         this.name = s3.name;
         this.age = s3.age;
     }
