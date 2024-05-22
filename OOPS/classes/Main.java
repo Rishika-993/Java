@@ -19,6 +19,9 @@ public class Main {
         Student rishika;
         // A class is a named group of properties and methods
         // A class is a template of an object and an object is an instance of a class
+        // A class is a logical construct and  an object is a physical reality and occupies space in memory
+        // A class is a user defined data type and an object is a variable of that data type
+        // A class is a blueprint for an object
     }
 }
 
