@@ -17,7 +17,8 @@ public class Main {
         Student students = new Student();
 
         Student rishika;
-        rishika = new Student();
+        // A class is a named group of properties and methods
+        // A class is a template of an object and an object is an instance of a class
     }
 }
 
