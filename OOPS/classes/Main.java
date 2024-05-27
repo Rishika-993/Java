@@ -34,6 +34,13 @@ public class Main {
 
         Student yashi = new Student(13, "Yashi", 90.0f);
         yashi.greeting
+
+        Student one = new Student();
+        Student two = one;
+
+        one.name = "Something Something";
+        System.out.println(two.name);  //Something Something
+        // therefore, the value of two is also changed on changing the value of one, heap storage reference
     }
 }
 
@@ -50,11 +57,11 @@ class Student{
     
     // we need one word to access every object
 
-    Student(){
-        this.rollno = 13;
-        this.name = "rishika agarwal";
-        this.marks = 88f;
-    }   
+    // Student(){
+    //     this.rollno = 13;
+    //     this.name = "rishika agarwal";
+    //     this.marks = 88f;
+    // }   
 
     void greeting(){
         System.out.println("Hello, I am a student, My name is" + name);
@@ -74,4 +81,8 @@ class Student{
         this.marks = student.marks;
     }
 
+    // call a constructor from another constructor using this keyword
+    Student(){
+        this(13, "Default person", 100.0f);
+    }
 }
