@@ -19,6 +19,12 @@ public class WrapperExample {
 
         //when a non-primitive is final, you can't reassing it
         rishika = new A("new name");  // error
+
+        A obj;
+
+        for(int i = 0; i < 1000000; i++){
+            obj = new A("Object" + i);
+        } // object is destroyed every time it's a load on memory after the loop ends
     }
 
     static void swap(int a, int b){
@@ -40,6 +46,12 @@ class A {
     String name;
 
     public A(String name){
+        System.out.println("Object is created");
         this.name = name;
     }
+
+    @override
+    protected void finalize() throws Throwable{
+        System.out.println("Object is destroyed");
+    }   
 }
