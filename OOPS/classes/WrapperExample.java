@@ -21,10 +21,12 @@ public class WrapperExample {
         rishika = new A("new name");  // error
 
         A obj;
+        obj = new A("randomname");
+        System.out.println(obj);            //some hash value - hashcode
 
-        for(int i = 0; i < 1000000; i++){
-            obj = new A("Object" + i);
-        } // object is destroyed every time it's a load on memory after the loop ends
+        // for(int i = 0; i < 1000000; i++){
+        //     obj = new A("Object" + i);
+        // } // object is destroyed every time it's a load on memory after the loop ends
     }
 
     static void swap(int a, int b){
